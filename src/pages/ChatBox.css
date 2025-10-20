@@ -1,0 +1,99 @@
+.messages-header {
+  background: var(--ion-background-color);
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--ion-color-dark-shade);
+}
+
+.messages-header ion-segment {
+  --background: transparent;
+  margin-top: 8px;
+}
+
+.empty-messages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 20px;
+}
+
+.empty-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.group-header {
+  --background: var(--ion-color-dark);
+  --color: var(--ion-color-dark-contrast);
+  --padding-start: 16px;
+  margin-top: 16px;
+}
+
+.group-header:first-of-type {
+  margin-top: 0;
+}
+
+.message-item {
+  --padding-start: 16px;
+  --inner-padding-end: 16px;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.sender-name {
+  font-weight: 600;
+  margin: 0;
+}
+
+.message-time {
+  font-size: 12px;
+}
+
+.message-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-preview p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 250px;
+}
+
+.message-status {
+  margin-left: 8px;
+}
+
+.unread-badge {
+  --background: var(--ion-color-danger);
+  --color: white;
+  font-size: 12px;
+  min-width: 20px;
+  height: 20px;
+}
+
+.new-message-form {
+  padding: 16px;
+}
+
+.message-actions {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+  justify-content: center;
+}
+
+.message-actions ion-button {
+  flex: 1;
+}

@@ -1,0 +1,21 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+.search-container {
+  padding: 8px 16px;
+}
+
+.category-filter {
+  padding: 8px 16px;
+  background: var(--ion-background-color);
+  border-bottom: 1px solid var(--ion-color-dark-shade);
+}
+
+.category-filter ion-segment {
+  --background: transparent;
+}
+
+.videos-list {
+  padding: 0;
+}

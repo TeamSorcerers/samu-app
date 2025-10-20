@@ -1,0 +1,144 @@
+.video-card {
+  margin: 8px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-thumbnail-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+}
+
+.video-thumbnail-container:hover .video-play-overlay {
+  opacity: 1;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-duration-overlay {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.local-video-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(0, 150, 0, 0.9);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.local-video-badge ion-text {
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.video-duration {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.video-play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-card:hover .video-play-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.video-info {
+  padding: 12px;
+}
+
+.video-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.channel-avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.video-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.video-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.channel-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.favorite-button {
+  --padding-start: 8px;
+  --padding-end: 8px;
+}
+
+.video-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 8px 0;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.stat-item ion-icon {
+  font-size: 16px;
+}
+
+.video-description {
+  font-size: 14px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
