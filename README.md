@@ -230,16 +230,6 @@ npm run test:e2e     # Testes E2E
 npm run lint         # Análise de código
 ```
 
-## 🚀 Funcionalidades Futuras
-
-- [ ] **Autenticação de usuário**
-- [ ] **Sincronização em nuvem**
-- [ ] **Comentários em vídeos**
-- [ ] **Sistema de likes**
-- [ ] **Notificações push**
-- [ ] **Compartilhamento social**
-- [ ] **Edição básica de vídeo**
-- [ ] **Streaming ao vivo**
 
 ## 🤝 Contribuição
 
@@ -253,9 +243,7 @@ npm run lint         # Análise de código
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 👥 Autores
 
-- **Sua Nome** - _Desenvolvimento inicial_ - [@seuusuario](https://github.com/seuusuario)
 
 ## 🙏 Agradecimentos
 
@@ -264,9 +252,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 - **Capacitor** pela integração nativa
 - **Comunidade open source** pelo suporte contínuo
 
-## 📞 Suporte
 
-Para suporte, envie um email para `seu.email@exemplo.com` ou abra uma issue no GitHub.
 
 ---
 
