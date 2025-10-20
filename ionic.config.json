@@ -1,0 +1,7 @@
+{
+  "name": "samu-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
