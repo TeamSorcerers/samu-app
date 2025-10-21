@@ -34,9 +34,9 @@ import {
 } from 'ionicons/icons';
 import { useState, useRef } from 'react';
 import { useApp } from '../contexts/AppContext';
-import './ChatBox.css';
+import './Messages.css';
 
-export function ChatBox(){
+export function Messages() {
   const { messages, addMessage } = useApp();
   const [searchText, setSearchText] = useState('');
   const [selectedSegment, setSelectedSegment] = useState('all');
@@ -87,7 +87,7 @@ export function ChatBox(){
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar color="dark">
+        <IonToolbar>
           <IonTitle>Mensagens</IonTitle>
           <IonButton slot="end" fill="clear">
             <IonIcon icon={ellipsisVertical} />
@@ -182,9 +182,9 @@ export function ChatBox(){
           </IonList>
         )}
 
-        <IonFab vertical="bottom" horizontal="end">
+        <IonFab vertical="bottom" horizontal="end" slot="fixed">
           <IonFabButton 
-            color="primary"
+            className="play-button"
             onClick={() => setIsNewChatOpen(true)}
           >
             <IonIcon icon={add} />

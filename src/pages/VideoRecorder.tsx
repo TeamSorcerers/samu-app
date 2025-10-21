@@ -29,9 +29,9 @@ import {
 } from 'ionicons/icons';
 import { useState, useRef } from 'react';
 import { useApp } from '../contexts/AppContext';
-import './Tab2.css';
+import './VideoRecorder.css';
 
-export function Tab2(){
+export function VideoRecorder(){
   // Estados para gravação simples
   const [isRecording, setIsRecording] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
@@ -55,7 +55,7 @@ export function Tab2(){
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const chunksRef = useRef<Blob[]>([]);
 
-  const { addVideo, getLocalVideoUrl } = useApp();
+  const { addVideo } = useApp();
 
   // Funções auxiliares
   const formatTime = (seconds: number) => {
@@ -212,11 +212,11 @@ export function Tab2(){
   return(
     <IonPage>
       <IonHeader>
-        <IonToolbar color="dark">
+        <IonToolbar color="samu-custom">
           <IonTitle>Criar Conteúdo</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent fullscreen class="samu-custom-bg">
         <div className="recording-container">
           <IonCard className="camera-preview">
             <IonCardContent>

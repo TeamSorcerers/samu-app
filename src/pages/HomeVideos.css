@@ -1,0 +1,164 @@
+/* HomeVideos - Estilo YouTube */
+
+/* Background customizado */
+.samu-custom-bg {
+  --background: #f9f9f9;
+  background-color: #f9f9f9;
+}
+
+/* Toolbar customizado - Header branco */
+ion-toolbar[color="samu-custom"] {
+  --background: #ffffff;
+  --color: #030303;
+  --border-color: #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+ion-header ion-title {
+  color: #ff6500 !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-family: 'YouTube Sans', 'Roboto', sans-serif;
+}
+
+.search-container {
+  padding: 16px;
+  background: #f9f9f9;
+}
+
+.search-container ion-searchbar {
+  --background: #ffffff;
+  --color: #030303;
+  --placeholder-color: #606060;
+  --icon-color: #606060;
+  border-radius: 24px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 6px rgba(32,33,36,.15);
+}
+
+.category-filter {
+  padding: 0 16px 16px;
+  background: #f9f9f9;
+}
+
+.category-filter ion-segment {
+  --background: #ffffff;
+  border-radius: 32px;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.category-filter ion-segment-button {
+  --color: #606060;
+  --color-checked: #030303;
+  --background-checked: #e5e5e5;
+  --indicator-color: transparent;
+  border-radius: 28px;
+  margin: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.category-filter ion-segment-button.segment-button-checked {
+  box-shadow: inset 2px 2px 4px var(--samu-shadow-dark), inset -2px -2px 4px var(--samu-shadow-light);
+}
+
+/* Títulos de seção estilo YouTube */
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 24px 16px 12px 16px;
+  color: #030303;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Grid e listas de vídeos estilo YouTube */
+.video-grid {
+  display: grid;
+  gap: 16px;
+  padding: 0 16px;
+  margin-bottom: 32px;
+}
+
+.video-grid.recommended,
+.video-grid.trending {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.video-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 16px;
+  margin-bottom: 32px;
+}
+
+/* Responsividade mobile */
+@media (max-width: 768px) {
+  .video-grid.recommended,
+  .video-grid.trending {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .video-section {
+    padding: 0 12px;
+    margin-bottom: 24px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .search-container {
+    padding: 12px;
+  }
+}
+
+/* Botão flutuante estilo YouTube */
+.play-button {
+  --background: #ff6500;
+  --color: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  
+  animation: float 3s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.play-button:hover {
+  --background: #e05a00;
+  --color: #ffffff;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsividade mobile */
+@media (max-width: 768px) {
+  .video-grid.recommended,
+  .video-grid.trending {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .section-title {
+    margin: 20px 12px 8px 12px;
+    font-size: 1.1rem;
+  }
+  
+  .search-container {
+    padding: 12px;
+  }
+  
+  .video-grid,
+  .video-list {
+    padding: 0 12px;
+  }
+}

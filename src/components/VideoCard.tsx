@@ -22,11 +22,13 @@ import './VideoCard.css';
 interface VideoCardProps {
   video: Video;
   showFavoriteButton?: boolean;
+  layout?: 'vertical' | 'horizontal';
 }
 
 export const VideoCard: React.FC<VideoCardProps> = ({ 
   video, 
-  showFavoriteButton = true 
+  showFavoriteButton = true,
+  layout = 'vertical'
 }) => {
   const { addToFavorites, removeFromFavorites, isFavorite, getLocalVideoUrl } = useApp();
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -75,7 +77,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({
 
   return (
     <>
-      <IonCard className="video-card">
+      <IonCard className={`video-card ${layout}`}>
         <div className="video-thumbnail-container" onClick={handlePlayVideo}>
           <IonImg 
             src={video.thumbnail} 

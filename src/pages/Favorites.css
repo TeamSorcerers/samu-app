@@ -1,0 +1,142 @@
+/* Favorites - Favoritos com Neumorphism */
+
+ion-content {
+  --background: var(--samu-bg-primary);
+}
+
+.empty-favorites {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 20px;
+  background: var(--samu-bg-primary);
+}
+
+.empty-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: var(--samu-text-secondary);
+}
+
+.empty-content ion-icon {
+  color: var(--samu-text-primary);
+}
+
+.favorites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--samu-bg-primary);
+  border-bottom: 1px solid var(--samu-shadow-light);
+}
+
+.view-controls ion-segment {
+  --background: var(--samu-bg-secondary);
+  border-radius: 12px;
+  min-width: 120px;
+  box-shadow: 8px 8px 16px var(--samu-shadow-dark), -8px -8px 16px var(--samu-shadow-light);
+}
+
+.view-controls ion-segment-button {
+  --color: var(--samu-text-secondary);
+  --color-checked: var(--samu-text-primary);
+  --background-checked: var(--samu-red);
+  --indicator-color: transparent;
+  border-radius: 8px;
+  margin: 4px;
+}
+
+.view-controls ion-segment-button.segment-button-checked {
+  box-shadow: inset 2px 2px 4px var(--samu-shadow-dark), inset -2px -2px 4px var(--samu-shadow-light);
+}
+
+.sort-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.sort-controls ion-button {
+  --background: var(--samu-bg-secondary);
+  --color: var(--samu-text-primary);
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px var(--samu-shadow-dark), -4px -4px 8px var(--samu-shadow-light);
+}
+
+.sort-controls ion-button:active {
+  box-shadow: inset 2px 2px 4px var(--samu-shadow-dark), inset -2px -2px 4px var(--samu-shadow-light);
+  transform: scale(0.95);
+}
+
+.selection-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--samu-red);
+  color: var(--samu-text-primary);
+  box-shadow: 0 4px 8px var(--samu-shadow-dark);
+}
+
+.selection-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.selection-actions ion-button {
+  --background: var(--samu-bg-secondary);
+  --color: var(--samu-text-primary);
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px var(--samu-shadow-dark), -4px -4px 8px var(--samu-shadow-light);
+}
+
+.favorites-content.list {
+  padding: 0;
+  background: var(--samu-bg-primary);
+}
+
+.favorite-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--samu-bg-secondary);
+  margin: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px var(--samu-shadow-dark), -4px -4px 8px var(--samu-shadow-light);
+}
+
+.selection-checkbox {
+  margin-top: 20px;
+  --background: var(--samu-bg-secondary);
+  border-radius: 4px;
+  box-shadow: inset 2px 2px 4px var(--samu-shadow-dark), inset -2px -2px 4px var(--samu-shadow-light);
+}
+
+.favorites-content.grid {
+  padding: 8px;
+  background: var(--samu-bg-primary);
+}
+
+.grid-item {
+  position: relative;
+}
+
+.grid-checkbox {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 10;
+  background: var(--samu-bg-secondary);
+  border-radius: 4px;
+  padding: 4px;
+  box-shadow: 4px 4px 8px var(--samu-shadow-dark), -4px -4px 8px var(--samu-shadow-light);
+}
+
+.grid-item .video-card {
+  margin: 8px;
+}

@@ -1,123 +1,318 @@
-/* YouTube-inspired theme variables */
+/* SAMU App - Neumorphism Theme */
 
 :root {
-  /* Primary Colors - YouTube Red */
-  --ion-color-primary: #ff0000;
-  --ion-color-primary-rgb: 255, 0, 0;
+  /* Cores YouTube Style */
+  --youtube-bg-primary: #ffffff;      /* Fundo branco */
+  --youtube-bg-secondary: #f9f9f9;    /* Fundo cinza claro */
+  --youtube-text-primary: #030303;    /* Texto preto */
+  --youtube-text-secondary: #606060;  /* Texto cinza */
+  --youtube-red: #ff6500;             /* Laranja YouTube */
+  --youtube-shadow: #e0e0e0;          /* Sombra suave */
+  --youtube-border: #e5e5e5;          /* Bordas claras */
+
+  /* Cores principais do SAMU App - ATUALIZADAS */
+  --samu-bg-primary: #f9f9f9;         /* Fundo cinza claro */
+  --samu-bg-secondary: #ffffff;       /* Cards brancos */
+  --samu-text-primary: #030303;       /* Texto preto */
+  --samu-text-secondary: #606060;     /* Texto cinza */
+  --samu-red: #ff6500;                /* Laranja principal */
+  --samu-blue: #065fd4;               /* Azul YouTube */
+  --samu-shadow-light: #ffffff;       /* Sombra clara */
+  --samu-shadow-dark: #e0e0e0;        /* Sombra escura */
+
+  /* Primary Colors - Laranja */
+  --ion-color-primary: #ff6500;
+  --ion-color-primary-rgb: 255, 101, 0;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #e00000;
-  --ion-color-primary-tint: #ff1a1a;
+  --ion-color-primary-shade: #e05a00;
+  --ion-color-primary-tint: #ff7519;
 
-  /* Secondary Colors */
-  --ion-color-secondary: #3880ff;
-  --ion-color-secondary-rgb: 56, 128, 255;
-  --ion-color-secondary-contrast: #ffffff;
-  --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #3171e0;
-  --ion-color-secondary-tint: #4c8dff;
+  /* SAMU Custom Color - YouTube Style */
+  --ion-color-samu-custom: #ffffff;
+  --ion-color-samu-custom-rgb: 255, 255, 255;
+  --ion-color-samu-custom-contrast: #030303;
+  --ion-color-samu-custom-contrast-rgb: 3, 3, 3;
+  --ion-color-samu-custom-shade: #e5e5e5;
+  --ion-color-samu-custom-tint: #ffffff;
+
+  /* Secondary Colors - Blue */
+  --ion-color-secondary: #4DA6FF;
+  --ion-color-secondary-rgb: 77, 166, 255;
+  --ion-color-secondary-contrast: #E0E0E0;
+  --ion-color-secondary-contrast-rgb: 224, 224, 224;
+  --ion-color-secondary-shade: #4494E0;
+  --ion-color-secondary-tint: #5FADFF;
 
   /* Success */
-  --ion-color-success: #2dd36f;
-  --ion-color-success-rgb: 45, 211, 111;
-  --ion-color-success-contrast: #ffffff;
-  --ion-color-success-contrast-rgb: 255, 255, 255;
-  --ion-color-success-shade: #28ba62;
+  --ion-color-success: #28ba62;
+  --ion-color-success-rgb: 40, 186, 98;
+  --ion-color-success-contrast: #E0E0E0;
+  --ion-color-success-contrast-rgb: 224, 224, 224;
+  --ion-color-success-shade: #24a356;
   --ion-color-success-tint: #42d77d;
 
   /* Warning */
   --ion-color-warning: #ffc409;
   --ion-color-warning-rgb: 255, 196, 9;
-  --ion-color-warning-contrast: #000000;
-  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-contrast: #1E1E1E;
+  --ion-color-warning-contrast-rgb: 30, 30, 30;
   --ion-color-warning-shade: #e0ac08;
   --ion-color-warning-tint: #ffca22;
 
   /* Danger */
-  --ion-color-danger: #eb445a;
-  --ion-color-danger-rgb: 235, 68, 90;
-  --ion-color-danger-contrast: #ffffff;
-  --ion-color-danger-contrast-rgb: 255, 255, 255;
-  --ion-color-danger-shade: #cf3c4f;
-  --ion-color-danger-tint: #ed576b;
+  --ion-color-danger: #FF0000;
+  --ion-color-danger-rgb: 255, 0, 0;
+  --ion-color-danger-contrast: #E0E0E0;
+  --ion-color-danger-contrast-rgb: 224, 224, 224;
+  --ion-color-danger-shade: #E00000;
+  --ion-color-danger-tint: #FF1A1A;
 
   /* Dark */
-  --ion-color-dark: #222428;
-  --ion-color-dark-rgb: 34, 36, 40;
-  --ion-color-dark-contrast: #ffffff;
-  --ion-color-dark-contrast-rgb: 255, 255, 255;
-  --ion-color-dark-shade: #1e2023;
-  --ion-color-dark-tint: #383a3e;
+  --ion-color-dark: #2C2C2C;
+  --ion-color-dark-rgb: 44, 44, 44;
+  --ion-color-dark-contrast: #E0E0E0;
+  --ion-color-dark-contrast-rgb: 224, 224, 224;
+  --ion-color-dark-shade: #262626;
+  --ion-color-dark-tint: #383838;
 
   /* Medium */
-  --ion-color-medium: #92949c;
-  --ion-color-medium-rgb: 146, 148, 156;
-  --ion-color-medium-contrast: #ffffff;
-  --ion-color-medium-contrast-rgb: 255, 255, 255;
-  --ion-color-medium-shade: #808289;
-  --ion-color-medium-tint: #9d9fa6;
+  --ion-color-medium: #B0B0B0;
+  --ion-color-medium-rgb: 176, 176, 176;
+  --ion-color-medium-contrast: #1E1E1E;
+  --ion-color-medium-contrast-rgb: 30, 30, 30;
+  --ion-color-medium-shade: #9B9B9B;
+  --ion-color-medium-tint: #B8B8B8;
 
   /* Light */
-  --ion-color-light: #f4f5f8;
-  --ion-color-light-rgb: 244, 245, 248;
-  --ion-color-light-contrast: #000000;
-  --ion-color-light-contrast-rgb: 0, 0, 0;
-  --ion-color-light-shade: #d7d8da;
-  --ion-color-light-tint: #f5f6f9;
+  --ion-color-light: #3A3A3A;
+  --ion-color-light-rgb: 58, 58, 58;
+  --ion-color-light-contrast: #E0E0E0;
+  --ion-color-light-contrast-rgb: 224, 224, 224;
+  --ion-color-light-shade: #333333;
+  --ion-color-light-tint: #4E4E4E;
+
+  /* Background colors - YouTube Style */
+  --ion-background-color: #f9f9f9;
+  --ion-background-color-rgb: 249, 249, 249;
+
+  --ion-text-color: #030303;
+  --ion-text-color-rgb: 3, 3, 3;
+
+  /* Toolbar específico */
+  --ion-toolbar-background: #ffffff;
+  --ion-toolbar-color: #030303;
+  --ion-toolbar-border-color: #e5e5e5;
 
   /* YouTube specific colors */
   --youtube-bg-primary: #ffffff;
   --youtube-bg-secondary: #f9f9f9;
   --youtube-text-primary: #030303;
   --youtube-text-secondary: #606060;
-  --youtube-border: #e5e5e5;
 }
 
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ion-color-primary: #ff4444;
-    --ion-color-primary-rgb: 255, 68, 68;
-    --ion-color-primary-contrast: #ffffff;
-    --ion-color-primary-contrast-rgb: 255, 255, 255;
-    --ion-color-primary-shade: #e03d3d;
-    --ion-color-primary-tint: #ff5757;
+/* =============================================================================
+ * Neumorphism Utility Classes
+ * =============================================================================
+ */
 
-    --ion-background-color: #0f0f0f;
-    --ion-background-color-rgb: 15, 15, 15;
+/* Botões base com neumorphism */
+.neumorph-button {
+  --background: #ffffff;
+  --color: #030303;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
 
-    --ion-text-color: #ffffff;
-    --ion-text-color-rgb: 255, 255, 255;
+.neumorph-button:active {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transform: scale(0.98);
+}
 
-    --ion-color-step-50: #1a1a1a;
-    --ion-color-step-100: #262626;
-    --ion-color-step-150: #333333;
-    --ion-color-step-200: #404040;
-    --ion-color-step-250: #4d4d4d;
-    --ion-color-step-300: #595959;
-    --ion-color-step-350: #666666;
-    --ion-color-step-400: #737373;
-    --ion-color-step-450: #808080;
-    --ion-color-step-500: #8c8c8c;
-    --ion-color-step-550: #999999;
-    --ion-color-step-600: #a6a6a6;
-    --ion-color-step-650: #b3b3b3;
-    --ion-color-step-700: #bfbfbf;
-    --ion-color-step-750: #cccccc;
-    --ion-color-step-800: #d9d9d9;
-    --ion-color-step-850: #e6e6e6;
-    --ion-color-step-900: #f2f2f2;
-    --ion-color-step-950: #ffffff;
+.neumorph-button:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
 
-    --youtube-bg-primary: #0f0f0f;
-    --youtube-bg-secondary: #181818;
-    --youtube-text-primary: #ffffff;
-    --youtube-text-secondary: #aaaaaa;
-    --youtube-border: #303030;
-  }
+/* Cards com tema claro */
+.neumorph-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
 
-  .ios body {
-    --ion-background-color: #0f0f0f;
-    --ion-background-color-rgb: 15, 15, 15;
-  }
+.neumorph-card:hover {
+  box-shadow: 12px 12px 24px var(--samu-shadow-dark), -12px -12px 24px var(--samu-shadow-light);
+  transform: translateY(-2px);
+}
+
+/* Botão flutuante de play */
+.play-button {
+  --background: #ff6500;
+  --color: #ffffff;
+  box-shadow: 0 4px 16px rgba(255, 101, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.play-button:active {
+  box-shadow: 0 2px 8px rgba(255, 101, 0, 0.4);
+  transform: scale(0.95);
+}
+
+.play-button:hover {
+  --background: #e05a00;
+}
+
+/* Input fields com tema claro */
+.neumorph-input {
+  --background: #ffffff;
+  --color: #030303;
+  --placeholder-color: #606060;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid #e5e5e5;
+}
+
+/* Container principal */
+.neumorph-container {
+  background: var(--samu-bg-primary);
+  color: var(--samu-text-primary);
+}
+
+/* Headers globais */
+ion-header {
+  background: #ffffff !important;
+}
+
+ion-header ion-toolbar {
+  --background: #ffffff !important;
+  --color: #030303 !important;
+  --border-color: #e5e5e5 !important;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #ffffff !important;
+}
+
+ion-header ion-title {
+  color: #030303 !important;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+ion-header ion-button {
+  --color: #030303 !important;
+}
+
+/* Tab Bar - Tema Claro YouTube */
+ion-tab-bar {
+  --background: #ffffff !important;
+  --color: #606060 !important;
+  --color-selected: #ff6500 !important;
+  border-top: 1px solid #e5e5e5 !important;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1) !important;
+}
+
+ion-tab-button {
+  --color: #606060 !important;
+  --color-selected: #ff6500 !important;
+  --background: transparent !important;
+}
+
+ion-tab-button.tab-selected {
+  --color: #ff6500 !important;
+}
+
+/* Card content específico para iOS */
+.card-content-ios {
+  background: #ffffff !important;
+  color: #030303 !important;
+}
+
+.ios .card-content-ios.hydrated {
+  background: #ffffff !important;
+  color: #030303 !important;
+}
+
+/* FAB Button - Tema Claro YouTube */
+ion-fab-button {
+  --background: #ff6500 !important;
+  --color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(255, 101, 0, 0.3) !important;
+}
+
+ion-fab-button:hover {
+  --background: #e05a00 !important;
+}
+
+ion-fab-button[color="primary"] {
+  --background: #ff6500 !important;
+  --color: #ffffff !important;
+}
+
+/* Ion Item específico */
+ion-item {
+  --background: #ffffff !important;
+  --color: #030303 !important;
+}
+
+/* Ion Content */
+ion-content {
+  --background: #f9f9f9 !important;
+}
+
+/* Ion Card */
+ion-card {
+  --background: #ffffff !important;
+  --color: #030303 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+/* Configurações globais para forçar tema claro */
+html, body {
+  --ion-background-color: #f9f9f9 !important;
+  --ion-text-color: #030303 !important;
+}
+
+/* ion-app global */
+ion-app {
+  --ion-background-color: #f9f9f9 !important;
+  --ion-text-color: #030303 !important;
+}
+
+/* Força tema claro em todos os elementos */
+* {
+  --ion-background-color: #f9f9f9 !important;
+  --ion-text-color: #030303 !important;
+}
+
+/* Configurações específicas para iOS */
+.ios ion-content {
+  --background: #f9f9f9 !important;
+  --color: #030303 !important;
+}
+
+.ios ion-item {
+  --background: #ffffff !important;
+  --color: #030303 !important;
+}
+
+.ios .item-native {
+  background: #ffffff !important;
+  color: #030303 !important;
+}
+
+.ios .card-content-ios {
+  background: #ffffff !important;
+  color: #030303 !important;
+}
+
+/* Forçar tema claro no tab bar para iOS */
+.ios ion-tab-bar {
+  --background: #ffffff !important;
+  background: #ffffff !important;
+  border-top: 1px solid #e5e5e5 !important;
 }

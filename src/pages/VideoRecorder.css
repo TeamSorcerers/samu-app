@@ -1,0 +1,293 @@
+/* VideoRecorder - Tema Claro YouTube */
+
+ion-content {
+  --background: #f9f9f9;
+}
+
+.recording-container {
+  padding: 16px;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.camera-preview {
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.preview-screen {
+  height: 300px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.camera-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.recording-status {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 101, 0, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.recording-time {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.preview-placeholder {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  color: #606060;
+}
+
+.preview-placeholder ion-icon {
+  color: #030303;
+}
+
+.start-camera-btn {
+  --background: #ffffff;
+  --color: #030303;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+.start-camera-btn:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.record-button {
+  --background: #ffffff;
+  --color: #030303;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid #e5e5e5;
+  width: 80px;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+
+.record-button:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.record-button.recording {
+  --background: #ff6500;
+  --color: #ffffff;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.stop-button {
+  --background: #ffffff;
+  --color: #030303;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+.stop-button:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-form {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid #e5e5e5;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.form-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #030303;
+  margin: 0;
+}
+
+.close-form-btn {
+  --background: transparent;
+  --color: #606060;
+  border-radius: 50%;
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.form-field ion-label {
+  color: #030303;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-field ion-input,
+.form-field ion-textarea,
+.form-field ion-select {
+  --background: #f9f9f9;
+  --color: #030303;
+  --placeholder-color: #606060;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+.form-field ion-input:focus,
+.form-field ion-textarea:focus,
+.form-field ion-select:focus {
+  border-color: #ff6500;
+  box-shadow: 0 0 0 2px rgba(255, 101, 0, 0.1);
+}
+
+.thumbnail-upload {
+  border: 2px dashed #e5e5e5;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.thumbnail-upload:hover {
+  border-color: #ff6500;
+  background: #fff5f0;
+}
+
+.thumbnail-preview {
+  max-width: 150px;
+  max-height: 100px;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
+}
+
+.upload-progress {
+  margin: 16px 0;
+}
+
+.progress-text {
+  color: #606060;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.publish-btn {
+  --background: #ff6500;
+  --color: #ffffff;
+  border-radius: 8px;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.publish-btn:hover {
+  --background: #e05a00;
+}
+
+.save-draft-btn {
+  --background: #ffffff;
+  --color: #030303;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.save-draft-btn:hover {
+  background: #f9f9f9;
+}
+
+/* Toast customizado */
+ion-toast {
+  --background: #ffffff;
+  --color: #030303;
+  --border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .recording-container {
+    padding: 12px;
+  }
+  
+  .video-form {
+    padding: 16px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .control-buttons {
+    gap: 12px;
+  }
+  
+  .record-button {
+    width: 70px;
+    height: 70px;
+  }
+}

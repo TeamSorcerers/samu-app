@@ -1,0 +1,43 @@
+/* Header Override - Tema Claro YouTube */
+
+/* Força background do header */
+ion-app ion-header {
+  background: #ffffff !important;
+}
+
+ion-app ion-header ion-toolbar {
+  background: #ffffff !important;
+  --background: #ffffff !important;
+  --color: #030303 !important;
+  --border-color: #e5e5e5 !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+ion-app ion-header ion-title {
+  color: #030303 !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+}
+
+ion-app ion-header ion-button {
+  color: #030303 !important;
+  --color: #030303 !important;
+}
+
+ion-app ion-header ion-button ion-icon {
+  color: #030303 !important;
+}
+
+/* Força cores para todos os headers independente da página */
+.ios ion-header ion-toolbar,
+.md ion-header ion-toolbar {
+  background: #ffffff !important;
+  --background: #ffffff !important;
+  --color: #030303 !important;
+}
+
+.ios ion-header ion-title,
+.md ion-header ion-title {
+  color: #030303 !important;
+}

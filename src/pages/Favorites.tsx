@@ -31,9 +31,9 @@ import {
 import { useState } from 'react';
 import { VideoCard } from '../components/VideoCard';
 import { useApp } from '../contexts/AppContext';
-import './Tab3.css';
+import './Favorites.css';
 
-export function Tab3(){
+export function Favorites() {
   const { favoriteVideos, removeFromFavorites } = useApp();
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [selectedVideos, setSelectedVideos] = useState<string[]>([]);
@@ -71,7 +71,7 @@ export function Tab3(){
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar color="dark">
+        <IonToolbar color="samu-custom">
           <IonTitle>Meus Favoritos</IonTitle>
           <IonButton 
             slot="end" 
