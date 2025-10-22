@@ -172,7 +172,7 @@
 
 .video-title {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.3;
   margin-bottom: 4px;
   color: #030303;
@@ -182,6 +182,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-align: center;
+  font-family: var(--font-title);
 }
 
 /* Títulos menores para layout horizontal */
@@ -197,6 +198,7 @@
   font-weight: 400;
   color: #606060;
   text-align: center;
+  font-family: var(--font-body);
 }
 
 .favorite-button {
@@ -246,6 +248,7 @@
   overflow: hidden;
   text-align: center;
   width: 100%;
+  font-family: var(--font-body);
 }
 
 /* Layout horizontal esconde descrição para economizar espaço */

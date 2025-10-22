@@ -1,6 +1,10 @@
 /* SAMU App - Neumorphism Theme */
 
 :root {
+  /* Fontes */
+  --font-title: 'Montserrat', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+  
   /* Cores YouTube Style */
   --youtube-bg-primary: #ffffff;      /* Fundo branco */
   --youtube-bg-secondary: #f9f9f9;    /* Fundo cinza claro */
@@ -315,4 +319,42 @@ ion-app {
   --background: #ffffff !important;
   background: #ffffff !important;
   border-top: 1px solid #e5e5e5 !important;
+}
+
+/* Configurações de Fonte Global */
+body {
+  font-family: var(--font-body);
+}
+
+/* Títulos usam Montserrat Bold */
+h1, h2, h3, h4, h5, h6,
+.section-title,
+ion-card-title,
+ion-list-header,
+ion-item-divider,
+.video-title,
+.channel-name {
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+/* Texto do corpo usa Nunito Regular */
+p, span, div, ion-label, ion-text,
+ion-button, ion-input, ion-textarea,
+.video-description,
+.message-preview,
+.stat-item {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* Headers específicos */
+ion-header ion-title {
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+/* Tabs */
+ion-tab-button {
+  font-family: var(--font-body);
 }

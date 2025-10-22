@@ -116,7 +116,30 @@ const mockMessages: Message[] = [
 export function AppProvider({ children }: { children: ReactNode }) {
   const [videos, setVideos] = useState<Video[]>(mockVideos);
   const [favoriteVideos, setFavoriteVideos] = useState<Video[]>([]);
-  const [messages, setMessages] = useState<Message[]>(mockMessages);
+  
+  // Carrega mensagens do localStorage ou usa as mockadas
+  const [messages, setMessages] = useState<Message[]>(() => {
+    const savedMessages = localStorage.getItem('appMessages');
+    if (savedMessages) {
+      try {
+        const parsed = JSON.parse(savedMessages);
+        // Converte timestamps de volta para Date
+        return parsed.map((msg: Message) => ({
+          ...msg,
+          timestamp: new Date(msg.timestamp)
+        }));
+      } catch (error) {
+        console.error('Erro ao carregar mensagens:', error);
+        return mockMessages;
+      }
+    }
+    return mockMessages;
+  });
+
+  // Salva mensagens no localStorage quando mudar
+  useEffect(() => {
+    localStorage.setItem('appMessages', JSON.stringify(messages));
+  }, [messages]);
 
   // Carregar vídeos locais ao inicializar
   useEffect(() => {

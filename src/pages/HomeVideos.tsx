@@ -45,13 +45,17 @@ export function HomeVideos(){
       <IonPage>
         <IonHeader>
           <IonToolbar color="samu-custom">
-            <IonTitle>YouTube</IonTitle>
+            <IonTitle>
+              <img src="/favicon.png" alt="Logo" style={{ height: '28px', verticalAlign: 'middle' }} />
+            </IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen class="samu-custom-bg">
           <IonHeader collapse="condense">
             <IonToolbar color="samu-custom">
-              <IonTitle size="large">YouTube</IonTitle>
+              <IonTitle size="large">
+                <img src="/favicon.png" alt="Logo" style={{ height: '36px', verticalAlign: 'middle' }} />
+              </IonTitle>
             </IonToolbar>
           </IonHeader>
           
